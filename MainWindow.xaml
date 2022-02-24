@@ -1,0 +1,65 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#e1d0e4">
+            <TextBlock x:Name="displayResult" FontWeight="Normal" FontSize="56" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+        </Grid>
+
+        <Border Grid.Row="1" Background="#707070" BorderBrush="Black" BorderThickness="2" Padding="5">
+            <Grid Grid.Row="1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="resetButton" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="24" Background="#fc5f6e" Click="FuncButton_Click">Reset</Button>
+                <Button x:Name="divButton" Grid.Column="2" FontWeight="Bold" FontSize="24" Background="#99f5ce" Click="NumButton_Click">/</Button>
+                <Button x:Name="multButton" Grid.Column="3" FontWeight="Bold" FontSize="24" Background="#99f5ce" Click="NumButton_Click">*</Button>
+
+                <Button Grid.Row="1" Grid.Column="0" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">7</Button>
+                <Button x:Name="eightButton" Grid.Row="1" Grid.Column="1" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">8</Button>
+                <Button x:Name="nineButton" Grid.Row="1" Grid.Column="2" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">9</Button>
+                <Button x:Name="subButton" Grid.Row="1" Grid.Column="3" FontWeight="Bold" FontSize="24" Background="#99f5ce" Click="NumButton_Click">-</Button>
+
+                <Button x:Name="fourButton" Grid.Row="2" Grid.Column="0"  FontSize="24" Background="#b2f5f3" Click="NumButton_Click">4</Button>
+                <Button x:Name="fiveButton" Grid.Row="2" Grid.Column="1" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">5</Button>
+                <Button x:Name="sixButton" Grid.Row="2" Grid.Column="2" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">6</Button>
+                <Button x:Name="addButton" Grid.Row="2" Grid.Column="3" FontWeight="Bold" FontSize="24" Background="#99f5ce" Click="NumButton_Click">+</Button>
+
+                <Button x:Name="oneButton" Grid.Row="3" Grid.Column="0" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">1</Button>
+                <Button x:Name="twoButton" Grid.Row="3" Grid.Column="1" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">2</Button>
+                <Button x:Name="threeButton" Grid.Row="3" Grid.Column="2" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">3</Button>
+
+                <Button x:Name="zeroButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="24" Background="#b2f5f3" Click="NumButton_Click">0</Button>
+                <Button x:Name="dotButton" Grid.Row="4" Grid.Column="2" FontSize="24" FontWeight="Bold" Background="#99f5ce" Click="NumButton_Click">,</Button>
+
+                <Button x:Name="calcButton" Grid.Row="3" Grid.Column="3"  Grid.RowSpan="2" FontWeight="Bold" FontSize="24" Background="#f6f6c1" Click="CalcButton_Click">=</Button>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
